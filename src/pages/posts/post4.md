@@ -3,6 +3,7 @@ layout: ../../layouts/MarkdownPostLayout.astro
 title: post4
 pubDate: 2022-08-28
 author: user
+tags: ["learning in public", "setbacks"]
 ---
 
 # こんにちは！

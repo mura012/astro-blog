@@ -1,6 +1,8 @@
 ---
+import BlogPosts from "../components/BlogPosts.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 // 正規表現でマークダウンファイルを取得している。
+
 const allPosts = await Astro.glob("../pages/posts/*.md");
 
 const pageTitle = "blog";
@@ -8,14 +10,11 @@ const pageTitle = "blog";
 
 <BaseLayout pageTitle={pageTitle}>
   <h1 class="text-red-300">My astro site</h1>
-  <ul>
-    <!-- マークダウンのデータが入った配列をmapで展開 -->
-    {
-      allPosts.map((post) => (
-        <li>
-          <a href={post.url}>{post.frontmatter.title}</a>
-        </li>
-      ))
-    }
-  </ul>
+  <!-- マークダウンのデータが入った配列をmapで展開 -->
+
+  {
+    allPosts.map((post) => (
+      <BlogPosts url={post.url} title={post.frontmatter.title} />
+    ))
+  }
 </BaseLayout>

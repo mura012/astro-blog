@@ -3,6 +3,7 @@ layout: ../../layouts/MarkdownPostLayout.astro
 title: Hello, World
 pubDate: 2022-08-28
 author: user
+tags: ["astro", "community"]
 ---
 
 # こんにちは！
