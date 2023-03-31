@@ -1,10 +1,14 @@
 ---
+import BaseLayout from "./BaseLayout.astro";
+
 const { frontmatter } = Astro.props;
 ---
 
-<!-- --- の中からプロップスを受け取る　--- -->
-<h1 class="text-red-900 font-bold text-xl">{frontmatter.title}</h1>
-<p>Written by {frontmatter.author}</p>
-<p>published on: {frontmatter.pubDate.slice(0, 10)}</p>
-<!-- slotの中身にはマークダウンの内容が入る  -->
-<slot />
+<BaseLayout>
+  <!-- --- の中からプロップスを受け取る　--- -->
+  <h1 class="text-red-900 font-bold text-xl">{frontmatter.title}</h1>
+  <p>Written by {frontmatter.author}</p>
+  <p>published on: {frontmatter.pubDate.slice(0, 10)}</p>
+  <!-- slotの中身にはマークダウンの内容が入る  -->
+  <slot />
+</BaseLayout>
