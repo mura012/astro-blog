@@ -9,6 +9,15 @@ const { frontmatter } = Astro.props;
   <h1 class="text-red-900 font-bold text-xl">{frontmatter.title}</h1>
   <p>Written by {frontmatter.author}</p>
   <p>published on: {frontmatter.pubDate.slice(0, 10)}</p>
+  <div class="tags">
+    {
+      frontmatter.tags.map((tag) => (
+        <p class="tag">
+          <a href={`/tags/${tag}`}>{tag}</a>
+        </p>
+      ))
+    }
+  </div>
   <!-- slotの中身にはマークダウンの内容が入る  -->
   <slot />
 </BaseLayout>
