@@ -1,5 +1,8 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: Hello, World
+pubDate: 2022-08-28
+author: user
 ---
 
 # こんにちは！
